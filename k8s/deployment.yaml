@@ -4,7 +4,7 @@ metadata:
   name: movie-app
   namespace: default
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: movie-app
@@ -14,7 +14,7 @@ spec:
         app: movie-app
     spec:
       containers:
-      - name: movie-app
-        image: kastrov/multibranch-flask-app:build-61
-        ports:
-        - containerPort: 5000
+        - name: movie-app
+          image: jenishchauhan/multibranch-flask-app:latest
+          ports:
+            - containerPort: 5000

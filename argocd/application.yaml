@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/KastroVKiran/k8s-multi-app.git
+    repoURL: https://github.com/jenish-chauhan/e-com-ci-cd-gitOps.git
     targetRevision: main
     path: k8s
 
