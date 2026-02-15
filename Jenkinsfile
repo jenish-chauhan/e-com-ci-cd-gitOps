@@ -6,9 +6,9 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "jenishchauhan/multibranch-flask-app"
+        IMAGE_NAME = "jenishchauhan/multibranch-python-app"
         GIT_USER   = "jenish-chauhan"
-        GIT_EMAIL  = "chauhanjenish2005@email.com"
+        GIT_EMAIL  = "chauhanjenish@2005@gmail.com"
     }
 
     stages {
@@ -26,7 +26,7 @@ pipeline {
                     env.IMAGE_TAG = "build-${BUILD_NUMBER}"
 
                     withCredentials([usernamePassword(
-                        credentialsId: 'dockerhub_cred',
+                        credentialsId: 'dockerhub-cred',
                         usernameVariable: 'DOCKER_USER',
                         passwordVariable: 'DOCKER_PASS'
                     )]) {
@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(
-                        credentialsId: 'github_cred',
+                        credentialsId: 'github-cred',
                         usernameVariable: 'GIT_USERNAME',
                         passwordVariable: 'GIT_TOKEN'
                     )]) {
