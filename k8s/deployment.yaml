@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: ecom-app
-          image: jenishchauhan/multibranch-python-app:build-6
+          image: jenishchauhan/multibranch-python-app:build-5
           ports:
             - containerPort: 5000
